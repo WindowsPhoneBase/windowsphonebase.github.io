@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
             border-bottom: 1px solid #ccc;
             padding-bottom: 10px;
         }
-        .feed-item h2 {
+        .feed-item h1 {
             margin: 0 0 5px;
         }
         .feed-item p {
@@ -38,7 +38,7 @@
 </head>
 <body>
     <h1>Windows Phone Base丨WP基地</h1>
-    <p>文档（简版展示）<br><br><br></p>
+    <p>文档内容（简版展示）<br><br><br></p>
     <div id="feed"></div>
 
     <script type="text/javascript">
@@ -62,12 +62,12 @@
         // 显示RSS数据
         function displayRSS(items) {
             var feedContainer = document.getElementById('feed');
-            feedContainer.innerHTML = ''; // 清空容器
+            feedContainer.innerHTML = '';
             items.forEach(function(item) {
                 var div = document.createElement('div');
                 div.className = 'feed-item';
                 div.innerHTML = [
-                    '<h2><a href="', item.link, '" target="_blank">', item.title, '</a></h2>',
+                    '<h1><a href="', item.link, '" target="_blank">', item.title, '</a></h1>',
                     '<p>', item.description, '</p>',
                     '<div class="content">', item.content, '</div>',
                     '<div class="button" onclick="toggleContent(this)">显示全文</div>'
@@ -92,7 +92,7 @@
             }
         }
 
-        // 调用函数获取RSS数据
+        // 调用函数
         fetchRSS();
     </script>
 </body>
