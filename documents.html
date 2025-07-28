@@ -1,99 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文档 - Windows Phone Base丨WP基地</title>
-    <style type="text/css">
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .feed-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 10px;
-        }
-        .feed-item h1 {
-            margin: 0 0 5px;
-        }
-        .feed-item p {
-            margin: 0 0 10px;
-        }
-        .feed-item .content {
-            display: none;
-        }
-        .button {
-            cursor: pointer;
-            text-decoration: underline;
-            color: blue;
-        }
-        img {
-            width: 100%;
-            max-width: 1280px;
-            height: auto;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文档 - Windows Phone Base丨WP基地</title>
+<style type="text/css">
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.feed-item {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+.feed-item h1 {
+	margin: 0 0 5px;
+}
+.feed-item p {
+	margin: 0 0 10px;
+}
+.feed-item .content {
+	display: none;
+}
+.button {
+	cursor: pointer;
+	text-decoration: underline;
+	color: blue;
+}
+img {
+	width: 100%;
+	max-width: 1280px;
+	height: auto;
+}
+</style>
+<script type="text/javascript" src="json2.js"></script>
+<script type="text/javascript">
+// 获取RSS数据
+function fetchRSS() {
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'https://api.wpbase.org/documents/article.php', true);
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			try {
+				var data = JSON.parse(xhr.responseText);
+				if (data.error) {
+					document.getElementById('feed').innerHTML = '<p>Error loading RSS feed: ' + data.error + '</p>';
+					return;
+				}
+				displayRSS(data);
+			} catch (e) {
+			document.getElementById('feed').innerHTML = '<p>Error parsing RSS feed: ' + e.message + '</p>';
+			}
+		}
+	};
+	xhr.send();
+}
+// 显示RSS数据
+function displayRSS(items) {
+	var feedContainer = document.getElementById('feed');
+	feedContainer.innerHTML = '';
+	for (var i = 0; i < items.length; i++) {
+		var item = items[i];
+		var div = document.createElement('div');
+		div.className = 'feed-item';
+		div.innerHTML = [
+			'<h1><a href="', item.link, '" target="_blank">', item.title, '</a></h1>',
+			'<p>', item.description, '</p>',
+			'<div class="content">', item.content, '</div>',
+			'<div class="button" onclick="toggleContent(this)">显示全文</div>'
+		].join('');
+		feedContainer.appendChild(div);
+	}
+}
+// 切换显示/隐藏全文
+function toggleContent(button) {
+	var feedItem = button.parentNode;
+	var description = feedItem.getElementsByTagName('p')[0];
+	var content = getElementsByClassName(feedItem, 'content')[0];
+	if (content.style.display === 'none') {
+		content.style.display = 'block';
+		description.style.display = 'none';
+		button.innerHTML = '收起全文';
+	} else {
+		content.style.display = 'none';
+		description.style.display = 'block';
+		button.innerHTML = '显示全文';
+	}
+}
+
+function getElementsByClassName(node, className) {
+	var results = [];
+	var elements = node.getElementsByTagName('*');
+	for (var i = 0; i < elements.length; i++) {
+		if ((' ' + elements[i].className + ' ').indexOf(' ' + className + ' ') > -1) {
+			results.push(elements[i]);
+		}
+	}
+	return results;
+}
+// 调用函数获取RSS数据
+fetchRSS();
+</script>
 </head>
 <body>
-    <h1>Windows Phone Base丨WP基地</h1>
-    <p>文档内容（简版展示）<br><br><br></p>
-    <div id="feed"></div>
-
-    <script type="text/javascript">
-        // 获取RSS数据
-        function fetchRSS() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://api.wpbase.org/documents/article.php', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var data = JSON.parse(xhr.responseText);
-                    if (data.error) {
-                        document.getElementById('feed').innerHTML = '<p>Error loading RSS feed: ' + data.error + '</p>';
-                        return;
-                    }
-                    displayRSS(data);
-                }
-            };
-            xhr.send();
-        }
-
-        // 显示RSS数据
-        function displayRSS(items) {
-            var feedContainer = document.getElementById('feed');
-            feedContainer.innerHTML = '';
-            items.forEach(function(item) {
-                var div = document.createElement('div');
-                div.className = 'feed-item';
-                div.innerHTML = [
-                    '<h1><a href="', item.link, '" target="_blank">', item.title, '</a></h1>',
-                    '<p>', item.description, '</p>',
-                    '<div class="content">', item.content, '</div>',
-                    '<div class="button" onclick="toggleContent(this)">显示全文</div>'
-                ].join('');
-                feedContainer.appendChild(div);
-            });
-        }
-
-        // 切换显示/隐藏全文
-        function toggleContent(button) {
-            var feedItem = button.parentNode;
-            var description = feedItem.querySelector('p');
-            var content = feedItem.querySelector('.content');
-            if (content.style.display === 'none') {
-                content.style.display = 'block';
-                description.style.display = 'none';
-                button.innerHTML = '收起全文';
-            } else {
-                content.style.display = 'none';
-                description.style.display = 'block';
-                button.innerHTML = '显示全文';
-            }
-        }
-
-        // 调用函数
-        fetchRSS();
-    </script>
+	<div class="navigator" style="width:100%; min-width:480px; height:64px; background-color:#FFFFFF; display:flex; align-items:center; position:fixed; top:0px; left:0px; overflow:hidden; z-index: 1000; margin:0px; padding:0px;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="10%" align="center"><a href="https://www.wpbase.org"> <img src="logo.png" alt="Windows Phone Basez丨WP基地" style="width:auto; height:100%; max-height:48px;"> </a></td>
+				<td width="10%" align="center"><a href="https://ww1.wpbase.org/index.html">项目主页</td>
+				<td width="10%" align="center"><a href="https://ww1.wpbase.org/documents.html">教程文档</a></td>
+				<td width="10%" align="center"><a href="https://store.wpbase.org">通用商店</a></td>
+				<td width="10%" align="center"><a href="https://firmware.wpbase.org">固件资源</a></td>
+				<td width="10%" align="center"><a href="https://www.wpbase.org">占位符</a></td>
+				<td width="10%" align="center"><a href="https://www.wpbase.org">占位符</a></td>
+				<td width="10%" align="center"><a href="https://ww1.wpbase.org">岚秀名言</a></td>
+				<td width="10%" align="center"><a href="http://ww1.wpbase.org/about.html">关于我们</a></td>
+				<td width="10%" align="center"><a href="http://ww1.wpbase.org/qq.html">联系方式</a></td>
+			</tr>
+		</table>
+	</div>
+	<div class="navigator" style="width:100%; min-width:480px; height:48px; background-color:#F0F0F0; display:flex; align-items:center; overflow:hidden; margin:0px; padding:0px;">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%" align="center"><h1>Windows Phone Base丨WP基地</h1></td>
+			</tr>
+		</table>
+	</div>
+	<div class="header-body" style="width:100%; min-width:480px; background:#F0F0F0; margin:0 auto; margin-top:16px; margin-bottom:32px; padding:0px;">
+		<div id="banner" align="center" style="width:50%; max-width:800px; min-width:240px; margin:0 auto; background-color:#F0F0F0;">
+			<p><img src="banner.png" alt="I AM 0.1%" style="width:80%; max-width:1440px; min-width:400px;"></p>
+			<p>文档内容（简版展示）<br>订阅地址：<a href="https://api.wpbase.org/documents/article.php">https://api.wpbase.org/documents/article.php</a><br><br><br></p>
+		</div>
+	</div>
+	<div id="feed"></div>
 </body>
 </html>
