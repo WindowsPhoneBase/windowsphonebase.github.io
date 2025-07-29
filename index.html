@@ -44,7 +44,7 @@ function fetchRSS() {
 function displayRSS(items) {
 	var feedContainer = document.getElementById('feed');
 	feedContainer.innerHTML = '';
-	var limit = Math.min(items.length, 2);
+	var limit = Math.min(items.length, 5);
 	for (var i = 0; i < limit; i++) {
 		var item = items[i];
 		var div = document.createElement('div');
@@ -98,6 +98,7 @@ fetchRSS();
 		<div id="announcement" class="content-item" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
 			<div style="margin:2.5em;">
 				<h2 style="text-align:center;">最新文档</h2>
+				<p align="center">查阅全部文档请访问：<a href="https://ww1.wpbase.org/documents.html">教程文档</a></p>
 				<div id="feed"></div>
 			</div>
 		</div>
