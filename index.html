@@ -61,9 +61,9 @@ function displayRSS(items) {
 fetchRSS();
 </script>
 </head>
-<body style="margin:0px; padding:0px; background-color:#0072C6;">
+<body style="margin:0; padding:0; background-color:#0072C6;">
 	<!--导航条-->
-	<div class="navigator" style="width:100%; min-width:480px; height:64px; background-color:#FFFFFF; display:flex; align-items:center; position:fixed; top:0px; left:0px; overflow:hidden; z-index: 1000; margin:0px; padding:0px;">
+	<div id="navigator" style="width:100%; min-width:480px; height:64px; background-color:#FFFFFF; display:flex; align-items:center; position:fixed; top:0px; overflow:hidden; z-index: 1000">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="10%" align="center"><a href="https://www.wpbase.org"> <img src="logo.png" alt="Windows Phone Basez丨WP基地" style="width:auto; height:100%; max-height:48px;"> </a></td>
@@ -80,29 +80,25 @@ fetchRSS();
 		</table>
 	</div>
 	<!--隐藏放置h1以欺骗搜索引擎-->
-	<div class="navigator" style="width:100%; min-width:480px; height:48px; background-color:#F0F0F0; display:flex; align-items:center; overflow:hidden; margin:0px; padding:0px;">
+	<div id="title" style="width:100%; min-width:480px; height:48px; background-color:#F0F0F0; display:flex; align-items:center; overflow:hidden; margin:0px; padding:0px;">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="100%" align="center"><h1>Windows Phone Base丨WP基地</h1></td>
 			</tr>
 		</table>
 	</div>
-	<!--页头-->
-	<div class="header-body" style="width:100%; min-width:480px; background:#F0F0F0; margin:0 auto; margin-top:16px; margin-bottom:16px; padding:0px;">
-		<div id="banner" align="center" style="width:50%; max-width:800px; min-width:240px; margin:0 auto; background-color:#F0F0F0;">
-			<p><img src="banner.png" alt="I AM 0.1%" style="width:80%; max-width:1440px; min-width:400px;"></p>
+	<div id="content-body" style="width:100%; max-width:1600px; min-width:480px; margin:0 auto; background-color:#F0F0F0; padding-top:16px; padding-bottom: 0px; border:0px;">
+		<div id="header" align="center" style="width:50%; max-width:800px; min-width:240px; margin:0 auto; background-color:#F0F0F0; padding:16px 0;">
+			<p><img src="banner.png" alt="I AM 0.1%!" style="width:80%; max-width:960px; min-width:400px;"></p>
 		</div>
-	</div>
-	<!--内容主体-->
-	<div class="content-body" style="width:95%; max-width:1600px; margin:20px auto; border:0px; padding:0px; align-items:center;">
-		<div id="announcement" class="content-item" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
+		<div id="news" class="content-item" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
 			<div style="margin:2.5em;">
 				<h2 style="text-align:center;">最新文档</h2>
 				<p align="center">查阅全部文档请访问：<a href="http://ww1.wpbase.org/documents.html">教程文档</a></p>
 				<div id="feed"></div>
 			</div>
 		</div>
-		<div id="about" class="content-item" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
+		<div id="about" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
 			<div style="margin:2.5em;">
 				<h2 style="text-align:center;">关于我们</h2>
 				<div id="scrolltext" style="overflow:hidden; background-color:#202020; color:#FF4040; text-align:center; margin-left:5em; margin-right:5em; border:4px solid #A0A0A0; height: 40px; display:flex; align-items:center;">
@@ -115,7 +111,7 @@ fetchRSS();
 				</div>
 			</div>
 		</div>
-		<div id="extra-links" class="content-item" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
+		<div id="extra-links" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
 			<div style="margin:2.5em;">
 				<h2 style="text-align:center;">相关网站</h2>
 				<p>以下网站也可查阅相关资料：</p>
@@ -126,13 +122,9 @@ fetchRSS();
 				<p><br></p>
 			</div>
 		</div>
-	</div>
-	<!--页脚依靠Bug运行
-	<div class="footer-body" style="width:100%; background-color:#404040; overflow:hidden; margin-top:32px; color:#F0F0F0;>
-		<div id="footer" align="center" style="width:50%; max-width:800px; min-width:240px; margin:5em;">
+		<div id="footer" style="width:100%; background-color:#404040; color:white; text-align:center; padding:16px 0;">
 			<p align="center">服务器管理：YZ22B338807<br>教程网站管理：Shiriko123<br>技术支持：Ritsu909<br><br>&copy; 2022～2025 WP基地 保留所有权利（另有声明除外）<br><br>本站当前服务器：<a href="https://www.qkidc.com">全科云</a> <a href="https://github.com">GitHub Pages</a><br>字体鸣谢：<a href="https://www.jetbrains.com">JetBrains</a> <a href="https://github.com/adobe-fonts">思源黑体</a></p>
 		</div>
 	</div>
-	-->
 </body>
 </html>
