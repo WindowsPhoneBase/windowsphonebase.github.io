@@ -1,8 +1,10 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-<title>Windows Phone Base</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Language" content="zh-cn">
+<title>Windows Phone Base丨WP基地</title>
+<meta name="keywords" content="Windows Phone,WP,Lumia,Microsoft,NOKIA,微软,诺基亚,Windows Phone Base,WP基地">
+<meta name="description" content="专注于Windows Phone操作系统爱好者是社区">
 <style>
 .feed-item {
 	margin-bottom: 20px;
@@ -61,70 +63,75 @@ function displayRSS(items) {
 fetchRSS();
 </script>
 </head>
-<body style="margin:0; padding:0; background-color:#0072C6;">
-	<!--导航条-->
-	<div id="navigator" style="width:100%; min-width:480px; height:64px; background-color:#FFFFFF; display:flex; align-items:center; position:fixed; top:0px; overflow:hidden; z-index: 1000">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<body bgcolor="#F0F0F0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"> <!--bgcolor="#0072C6"-->
+	<!--导航栏-->
+	<div id="navigator" align="center" style="position:fixed; width:100%; height:64px; z-index:1000; top:0px; background-color: #FFFFFF; min-width:480px; overflow:hidden;">
+		<table border="0" width="100%" height="64px" cellpadding="0" bgcolor="#FFFFFF" style="border-collapse: collapse" bordercolor="#FFFFFF">
 			<tr>
-				<td width="10%" align="center"><a href="https://www.wpbase.org"> <img src="logo.png" alt="Windows Phone Basez丨WP基地" style="width:auto; height:100%; max-height:48px;"> </a></td>
-				<td width="10%" align="center"><a href="http://ww1.wpbase.org/index.html">项目主页</td>
-				<td width="10%" align="center"><a href="http://ww1.wpbase.org/documents.html">教程文档</a></td>
-				<td width="10%" align="center"><a href="https://store.wpbase.org">通用商店</a></td>
-				<td width="10%" align="center"><a href="https://firmware.wpbase.org">固件资源</a></td>
-				<td width="10%" align="center"><a href="https://www.wpbase.org">占位符</a></td>
-				<td width="10%" align="center"><a href="https://github.com/WindowsPhoneBase">GitHub项目</a></td>
-				<td width="10%" align="center"><a href="http://ww1.wpbase.org">岚秀名言</a></td>
-				<td width="10%" align="center"><a href="http://ww1.wpbase.org/about.html">关于我们</a></td>
-				<td width="10%" align="center"><a href="http://ww1.wpbase.org/qq.html">联系方式</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="https://www.wpbase.org"><img border="0" src="logo.png" width="64" height="64" align="center"></a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org">项目首页</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org/documents.html">教程文档</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="https://store.wpbase.org">通用商店</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="https://firmware.wpbase.org">固件下载</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org">占位符</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="https://github.com/WindowsPhoneBase">GitHub项目</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org">岚秀名言</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org">关于我们</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org">联系方式</a></td>
 			</tr>
 		</table>
 	</div>
 	<!--隐藏放置h1以欺骗搜索引擎-->
-	<div id="title" style="width:100%; min-width:480px; height:48px; background-color:#F0F0F0; display:flex; align-items:center; overflow:hidden; margin:0px; padding:0px;">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<div id="title" align="center" style="position:absolute; z-index:1; top:0px; width:100%; height:64px; min-width:480px; background-color: #FFFFFF; margin:0px; display:flex; align-items:center;">
+		<table width="100%" height="64px" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="100%" align="center"><h1>Windows Phone Base丨WP基地</h1></td>
 			</tr>
 		</table>
 	</div>
-	<div id="content-body" style="width:100%; max-width:1600px; min-width:480px; margin:0 auto; background-color:#F0F0F0; padding-top:16px; padding-bottom: 0px; border:0px;">
-		<div id="header" align="center" style="width:50%; max-width:800px; min-width:240px; margin:0 auto; background-color:#F0F0F0; padding:16px 0;">
-			<p><img src="banner.png" alt="I AM 0.1%!" style="width:80%; max-width:960px; min-width:400px;"></p>
+	<!--正文-->
+	<div id="content-container" style="position:absolute; z-index:1; top:64px; width:100%; height:auto; min-width:480px; background-color:#F0F0F0; min-width:480px; margin:0px auto;">
+		<div class="content-item" id="banner" style="width:100%; height:auto; margin:8px auto;">
+			<div style="margin:16px 5%;">
+				<p align="center"><img border="0" src="banner.png" width="100%" height="auto" style="max-height:400px; max-width:960px;" alt="WE ARE 0.1%!" ></p>
+			</div>
 		</div>
-		<div id="news" class="content-item" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
-			<div style="margin:2.5em;">
-				<h2 style="text-align:center;">最新文档</h2>
+		<div class="content-item" id="news" style="width:100%; height:auto; margin:8px 0px;">
+			<div style="margin:16px 5%;">
+				<h2 align="center">最新文档</h2>
 				<p align="center">查阅全部文档请访问：<a href="http://ww1.wpbase.org/documents.html">教程文档</a></p>
 				<div id="feed" style="width:100%; overflow:hidden; padding:0px;"></div>
+				<p align="center"><a href="http://ww1.wpbase.org/documents.html">查看更多文档…</a></p>
+				</div>
+		</div>
+		<div class="content-item" id="intro" style="width:100%; height:auto; margin:8px 0px;">
+			<div style="margin:16px 5%;">
+				<h2 align="center">关于我们</h2>
+				<table align="center" border="4" width="80%" height="48px" cellspacing="0" cellpadding="0" bgcolor="#202020" style="border:4px solid #A0A0A0; color:#FF4040">
+					<tr>
+						<td align="center" width="20%" height="100%" nowrap style="border:4px solid #A0A0A0; color:#FF4040"><b><big>2038-01-19 03:14:07 UTC</big></b></td>
+						<td align="center" width="80%" height="100%" nowrap style="border:4px solid #A0A0A0; color:#FF4040"><b><big><big><marquee behavior="scroll" direction="left" scrollamount="16">在线解决微软诺基亚微软Microsoft等等Windows Phone全系列刷机，全系列新旧款全系列刷机，开网络解PIN锁、修基带，改机型、推系统，ffu复活、9008救砖，缝补bug，thor2菜单、PartitionGuru-x64删分区磁盘、找驱动、全盘修复，单吊桌面32、上ARM64，大容量解锁、教部署、ESP修正、工程机数据等等，指哪刷哪。进可泥瓦打洞，退可越狱升级，抠一把中温鼻屎扩容字库，三变量分区编程器备份，还原系统，Q我就干。本人祖传巨硬老中医，纯原技术原版原手法操作纯手动到螺丝纸，顶级四肢灵活和无女朋友顾虑加持，双重保证您与爱机的安全 ，师从洋垃圾，备战华强北，毕业中关村。夜飞工程，竞技代码，游走于ET文明三圈，只用舌头就能舔开螺丝母，鼻子闻一下就知道这机子病在那里，用手掐一下电路把个脉就一切明了。大到检测更换屏幕中框后盖主板IC电池，小到喇叭听筒尾插按键配件螺丝纸，吹拉弹唱拆刷救解无不精通，深山苦练20余年，一天只睡4个小时，电话通知瞬间有如徐公子胜治灵魂入窍三位一体开始救机，成就高端一线望闻问切便可知晓机子还能不能抢救的贵族人群。超完美的风骚手法，I9级别的脑思维超前反应，分分钟输出几十种方案，能上各种网络工具，可直接接受机主电话指挥，电话通知后20秒之内接受任何姿势统一达成共识，身体强壮能连刷带修9999台不休息，嘤嘤音语音一天不喝水。8760小时不休息。深知lumia基于Win CE认识深刻，学识渊博，熟练掌握各种理论，认真学习过《lumia原理基础理论与Microsoft活好不粘人分析》《与机主心贴心的型号特性与配件更换匹配分析》《巨硬是如何炼成的》《论IT大师速成大法》《你也基于Win CE》《机你太美》等《做一件修修的事情》《来冲Win救梦》《phone的惊叹号》《斯皮尔伯格的大齿轮》专业书籍。能各种输出稳如老狗，24小时等待候命，一边干活一边大喊机主666，微软从来不失误，人称巨硬救机包不死，20多年单身心无旁骛不存在一命呜呼，机场如战场，战场如专场，丝毫不怠慢，坑爹绝不敢。华强队职业核心成员，拥有我一人就是一支军团随时拯救世界的能力。门口已埋地雷无人拜访全心投入，泡面矿泉水已经准备好8760不中断，怕分心已和女朋友分手。诚心诚意机主好，爆肝玩命来把机主保。十步刷一人，千里不远行。事了关机去，深藏身与名。相信我，绝对没有错。给我一片天空，还你一个奇迹，所说即所想，所想即所愿，所愿即所见，所见即所得，所得即所愿。天地鬼神，万民众生，炎黄江土，添砖加瓦。修德为上，物质为下。主要是为天地立心，为网民立命，为往圣继绝学，为万世科学开太平。不为赚钱，只为传递正能量。顺带兼职外接广东上空放冷气，长城贴瓷砖，飞机加转向灯，磁浮列车换刹车，珠穆朗玛峰装电梯，开普勒挖钻石，火星种土豆，木星种棉花，月球卖奶茶，水星开溜冰场等业务……戴尔Wirgley Acer W14刷机升级推送救砖，三星I687（Focus 3）刷机升级推送救砖，诺基亚900 Hydra刷机升级推送救砖，Acer Allegro刷机升级推送救砖， HTC Mondrian刷机升级推送救砖，诺基亚Microsoft Lumia 950刷机升级推送救砖，诺基亚701刷机升级救砖，三星I708刷机升级推送救砖。HTC HD7S（T9295)刷机升级推送救砖，诺基亚719刷机升级推送救砖， 诺基亚Microsoft Lumia 435刷机升级推送救砖，诺基亚Lumia 1320刷机升级推送救砖，诺基亚Illusionist刷机升级推送救砖，HTC Ignite刷机升级推送救砖，诺基亚Lumia1520V刷机升级推送救砖， HTC Prime 刷机升级推送救砖，诺基亚822刷机升级推送救砖，诺基亚Microsoft Xbox One Phone 刷机升级推送救砖，朗界RG740W刷机升级推送救砖，诺基亚Microsoft Lumia 535刷机升级推送救砖， 诺基亚Lumia 830刷机升级推送救砖，诺基亚710刷机升级推送救砖，诺基亚720 刷机升级推送救砖，华为Ascend D2刷机升级推送救砖，Acer Liquid M320刷机升级推送救砖， Acer W4刷机升级推送救砖。诺基亚530刷机升级推送救砖， 诺基亚520T刷机升级推送救砖，诺基亚720T刷机升级推送救砖， 诺基亚638刷机升级推送救砖，诺基亚610C刷机升级推送救砖，诺基亚Lumia 1000刷机升级推送救砖，诺基亚521刷机升级推送救砖， itc M430刷机升级推送救砖，LG E906（Jil Sander)刷机升级推送救砖，HTCHD7（T9292）刷机升级推送救砖，诺基亚520刷机升级推送救砖，诺基亚Lumia 1020刷机升级推送救砖，诺基亚720刷机升级推送救砖，诺基亚928（Verizon版） 刷机升级推送救砖，华为Ascend W3刷机升级推送救砖， HTC Spark 刷机升级推送救砖，诺基亚825刷机升级推送救砖， HTC Schubert刷机升级推送救砖，HTC PC40100刷机升级推送救砖，诺基亚Lumia 800刷机升级推送救砖， HTC PD67100刷机升级推送救砖，富士通IS12T刷机升级推送救砖， 诺基亚900刷机升级推送救砖，HTC T8698（7 Mozart)刷机升级推送救砖， 微软Pink Kin TWOm刷机升级推送救砖，诺基亚526（移动3G)刷机升级推送救砖三星I8750（ATIV S/32GB）刷机升级推送救砖，三星I8750（ATIV S/16GB）刷机升级推送救砖，诺基亚610刷机升级推送救砖， 诺基亚Goldfinger 刷机升级推送救砖，诺基亚Phantom 刷机升级推送救砖，诺基亚636刷机升级推送救砖， 诺基亚820刷机升级推送救砖，诺基亚Spinel刷机升级推送救砖， 诺基亚635刷机升级推送救砖，诺基亚Microsoft Lumia 750刷机升级推送救砖，诺基亚Microsoft Lumia 1530刷机升级推送救砖，诺基亚Microsoft Lumia 532刷机升级推送救砖，Microsoft RM-1099刷机升级推送救砖，诺基亚RM-977刷机升级推送救砖， 华为Ascend W1-U00刷机升级推送救砖， 索尼爱立信Julie刷机升级推送救砖，华为Ascend W2-U00刷机升级推送救砖， 东芝TG03刷机升级推送救砖， 诺基亚Lumia 920T 刷机升级推送救砖，Microsoft Lumia 950 XL刷机升级推送救砖，诺基亚Microsoft 诺基亚Lumia 650刷机升级推送救砖，诺基亚800C刷机升级推送救砖，诺基亚730刷机升级推送救砖， 诺基亚630刷机升级推送救砖， HTC Bresson刷机升级推送救砖。三星I667（Focus 2）刷机升级推送救砖， TCL S606刷机升级推送救砖，Microsoft 诺基亚Lumia 640（双4G）刷机升级推送救砖， 诺基亚Lumia 925（16GB）刷机升级推送救砖， 诺基亚Lumia 1525刷机升级推送救砖， 三星I8700（Omnia 7）刷机升级推送救砖， HTC Titan II刷机升级推送救砖， LG E900（Optimus 7）刷机升级推送救砖， 诺基亚900 Hydra刷机升级推送救砖，LG C900（Optimus 7Q）刷机升级推送救砖，HTC Gold刷机升级推送救砖， HTC 8S刷机升级推送救砖， HTC 8X刷机升级推送救砖， Microsoft诺基亚Lumia 540刷机升级推送救砖，LG Lancet刷机升级推送救砖， 三星I917（Focus）刷机升级推送救砖， HTC 8X（C625e/LTE） HTC T8788（7 Surround）刷机升级推送救砖， 华硕WM7刷机升级推送救砖， 索尼爱立信Nanami刷机升级推送救砖， 中兴Render 刷机升级推送救砖，HTC X310e（凯旋） 刷机升级推送救砖，诺基亚620刷机升级推送救砖， 诺基亚Lumia920刷机升级推送救砖， HTC 7 Trophy（T8686）刷机升级推送救砖， 诺基亚900蝙蝠侠 刷机升级推送救砖，诺基亚Lumia 1030刷机升级推送救砖， LG M13刷机升级推送救砖， LG E740（Miracle）刷机升级推送救砖， 诺基亚Lumia 920刷机升级推送救砖， 三星OMNIA M（S759）刷机升级推送救砖， 诺基亚Lumia 929 刷机升级推送救砖，诺基亚625刷机升级推送救砖，三星OMNIA M（S7530)刷机升级推送救砖， 努比亚W5刷机升级推送救砖，诺基亚Lumia 1820刷机升级推送救砖， LG Uni8 刷机升级推送救砖，富士通IS12T刷机升级推送救砖， 诺基亚Lumia 730刷机升级推送救砖，小米米Phone刷机升级推送救砖， 诺基亚800（蝙蝠侠定制版） 刷机升级推送救砖，诺基亚RM-964 刷机升级推送救砖，华为Ascend W1-C00刷机升级推送救砖， LG GW910刷机升级推送救砖，诺基亚Lumia 930刷机升级推送救砖，HTC Titan Ⅲ刷机升级推送救砖， HTC Chrome刷机升级推送救砖， Acer E600 刷机升级推送救砖，诺基亚729刷机升级推送救砖，海信NANA刷机升级推送救砖， HTC 7 Trophy 刷机升级推送救砖，HTC HDD刷机升级推送救砖， Acer M310刷机升级推送救砖，HTC Bunyip 刷机升级推送救砖，HTC Elegant 刷机升级推送救砖， HTC 7 Pro(g)刷机升级推送救砖，HTC Diamond 3刷机升级推送救砖， 三星I8350刷机升级推送救砖，诺基亚Lumia X刷机升级推送救砖， 中兴V965W（Tania）刷机升级推送救砖，诺基亚750刷机升级推送救砖， 诺基亚703刷机升级推送救砖，HTC Titan刷机升级推送救砖， HTC C110e（Radar)刷机升级推送救砖， 诺基亚Lumia 925刷机升级推送救砖， 三星I937（Focus S）刷机升级推送救砖， 诺基亚P5238刷机升级推送救砖， 三星I677（Focus Flash）刷机升级推送救砖， 索尼爱立信X7 mini 刷机升级推送救砖， 三星I8350（Omnia W）刷机升级推送救砖， 戴尔Venue Pro刷机升级推送救砖， 诺基亚625（双卡版）刷机升级推送救砖， 诺基亚525 刷机升级推送救砖， 诺基亚725刷机升级推送救砖， 诺基亚Lumia 735 刷机升级推送救砖， 诺基亚926刷机升级推送救砖， 诺基亚610刷机升级推送救砖， 诺基亚Lumia 920（廉价版）刷机升级推送救砖， 诺基亚Lumia 1520刷机升级推送救砖， LG WP7 2刷机升级推送救砖， 华为Ascend W2（W2-T00/移动版）刷机升级推送救砖， HTC 7 Melody刷机升级推送救砖， HTC PB92100刷机升级推送救砖， LG VS750刷机升级推送救砖， VAIO Phone Biz刷机升级推送救砖， 三星OMNIA M（S7530E)刷机升级推送救砖， HP 惠普Elite x3刷机升级推送救砖， 索尼爱立信One刷机升级推送救砖， 阿尔卡特Idol Pro 4 刷机升级推送救砖， 小米4 HTC HD2，rx-100，rx.130，surface等工程机机型皆可接受远程刷机救砖升级推送服务，难度更高技术活的或者尸体和保密固件不分享的需要远程控刷，具体事宜可私聊或者脑电波咨询。</marquee></big></big></b></td>
+					</tr>
+				</table>
+				<p>这里是WP基地（Windows Phone Base），是一个专注于Windows Phone操作系统爱好者是社区，创立于2021年1月20日，创始人是闲鱼用户“微软大中华区洋垃圾总代理”，QQ交流群总群号码为为104919261。<br><br>我们以传承和发扬Windows Phone操作系统的独特体验为目标，致力于让这个“失败的成功之作”继续发光发热。我们建立这个网站的目的，是考虑到部分资料和资源相对封闭、没有一个统一的整合网站。原先，各种教程分布于各QQ群的群文件中，寻找教程相对麻烦，我们希望通过这个网站实现对Windows Phone中文教程的电子化以便查找。同时，由于官方Microsoft Store对Windows Phone操作系统逐渐停止服务，Gxap开发了Windows通用商店为大家提供服务，以便快速安装各种软件。对于更早的Windows Phone 7~8.0系统，现存资料较少，难以进行破解，我们希望能够通过这个网站发布相关内容；对于放弃Windows Phone系列操作系统之后的内部构建，我们希望能够通过这个网站为大家提供操作方法。我们热爱Windows Phone，所以希望通过建立这个网站来为Windows Phone爱好者提供玩机文档和资源，同时保存下关于Windows Phone的一切留下一个最终的归宿。请相信，微软的遗产不止于此，定然有更多的内容等待着诸位发掘和发扬，未来定然有更多的内存浮出水面，正如岚秀所说：“有这些东西我们理论上可以玩到微软倒闭，哦不，倒闭了还能继续玩。”<br><br>本站为非盈利性质网站，本站的建立离不开QQ群“WP特技研究所”管理组成员、离不开为Windows Phone玩机做出巨大贡献的各路大佬、离不开支持我们的所有人，你们的支持是我们坚持下去的动力。此外，本站部分相关人员不定期提供无常或有偿的远程协助操作Lumia设备的服务，如有需求请通过QQ联系；本站部分相关人员有价格实惠的二手Lumia手机出售，具体信息请关注闲鱼内容。<br><br>本站提示：操作前请确保您具有相关计算机基本操作知识，遇到拿不准的内容请先通过各种途径询问。切勿相信闲鱼部分商家宣传的“特殊手段”或“绝版资料出售”，所有内容均在国内外网站有公开，不要为这些内容付费！刷机有风险，操作需谨慎，重要资料和基带分区请及时备份，本站不因您操作设备造成的损失承担任何责任。</p>
 			</div>
 		</div>
-		<div id="about" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
-			<div style="margin:2.5em;">
-				<h2 style="text-align:center;">关于我们</h2>
-				<div id="scrolltext" style="overflow:hidden; background-color:#202020; color:#FF4040; text-align:center; margin-left:5em; margin-right:5em; border:4px solid #A0A0A0; height: 40px; display:flex; align-items:center;">
-					<marquee behavior="scroll" direction="left" scrollamount="16">
-						<p style="white-space:nowrap; width:100%;"><b><big><big>在线解决微软诺基亚微软Microsoft等等Windows Phone全系列刷机，全系列新旧款全系列刷机，开网络解PIN锁、修基带，改机型、推系统，ffu复活、9008救砖，缝补bug，thor2菜单、PartitionGuru-x64删分区磁盘、找驱动、全盘修复，单吊桌面32、上ARM64，大容量解锁、教部署、ESP修正、工程机数据等等，指哪刷哪。进可泥瓦打洞，退可越狱升级，抠一把中温鼻屎扩容字库，三变量分区编程器备份，还原系统，Q我就干。本人祖传巨硬老中医，纯原技术原版原手法操作纯手动到螺丝纸，顶级四肢灵活和无女朋友顾虑加持，双重保证您与爱机的安全 ，师从洋垃圾，备战华强北，毕业中关村。夜飞工程，竞技代码，游走于ET文明三圈，只用舌头就能舔开螺丝母，鼻子闻一下就知道这机子病在那里，用手掐一下电路把个脉就一切明了。大到检测更换屏幕中框后盖主板IC电池，小到喇叭听筒尾插按键配件螺丝纸，吹拉弹唱拆刷救解无不精通，深山苦练20余年，一天只睡4个小时，电话通知瞬间有如徐公子胜治灵魂入窍三位一体开始救机，成就高端一线望闻问切便可知晓机子还能不能抢救的贵族人群。超完美的风骚手法，I9级别的脑思维超前反应，分分钟输出几十种方案，能上各种网络工具，可直接接受机主电话指挥，电话通知后20秒之内接受任何姿势统一达成共识，身体强壮能连刷带修9999台不休息，嘤嘤音语音一天不喝水。8760小时不休息。深知lumia基于Win CE认识深刻，学识渊博，熟练掌握各种理论，认真学习过《lumia原理基础理论与Microsoft活好不粘人分析》《与机主心贴心的型号特性与配件更换匹配分析》《巨硬是如何炼成的》《论IT大师速成大法》《你也基于Win CE》《机你太美》等《做一件修修的事情》《来冲Win救梦》《phone的惊叹号》《斯皮尔伯格的大齿轮》专业书籍。能各种输出稳如老狗，24小时等待候命，一边干活一边大喊机主666，微软从来不失误，人称巨硬救机包不死，20多年单身心无旁骛不存在一命呜呼，机场如战场，战场如专场，丝毫不怠慢，坑爹绝不敢。华强队职业核心成员，拥有我一人就是一支军团随时拯救世界的能力。门口已埋地雷无人拜访全心投入，泡面矿泉水已经准备好8760不中断，怕分心已和女朋友分手。诚心诚意机主好，爆肝玩命来把机主保。十步刷一人，千里不远行。事了关机去，深藏身与名。相信我，绝对没有错。给我一片天空，还你一个奇迹，所说即所想，所想即所愿，所愿即所见，所见即所得，所得即所愿。天地鬼神，万民众生，炎黄江土，添砖加瓦。修德为上，物质为下。主要是为天地立心，为网民立命，为往圣继绝学，为万世科学开太平。不为赚钱，只为传递正能量。顺带兼职外接广东上空放冷气，长城贴瓷砖，飞机加转向灯，磁浮列车换刹车，珠穆朗玛峰装电梯，开普勒挖钻石，火星种土豆，木星种棉花，月球卖奶茶，水星开溜冰场等业务……戴尔Wirgley Acer W14刷机升级推送救砖，三星I687（Focus 3）刷机升级推送救砖，诺基亚900 Hydra刷机升级推送救砖，Acer Allegro刷机升级推送救砖， HTC Mondrian刷机升级推送救砖，诺基亚Microsoft Lumia 950刷机升级推送救砖，诺基亚701刷机升级救砖，三星I708刷机升级推送救砖。HTC HD7S（T9295)刷机升级推送救砖，诺基亚719刷机升级推送救砖， 诺基亚Microsoft Lumia 435刷机升级推送救砖，诺基亚Lumia 1320刷机升级推送救砖，诺基亚Illusionist刷机升级推送救砖，HTC Ignite刷机升级推送救砖，诺基亚Lumia1520V刷机升级推送救砖， HTC Prime 刷机升级推送救砖，诺基亚822刷机升级推送救砖，诺基亚Microsoft Xbox One Phone 刷机升级推送救砖，朗界RG740W刷机升级推送救砖，诺基亚Microsoft Lumia 535刷机升级推送救砖， 诺基亚Lumia 830刷机升级推送救砖，诺基亚710刷机升级推送救砖，诺基亚720 刷机升级推送救砖，华为Ascend D2刷机升级推送救砖，Acer Liquid M320刷机升级推送救砖， Acer W4刷机升级推送救砖。诺基亚530刷机升级推送救砖， 诺基亚520T刷机升级推送救砖，诺基亚720T刷机升级推送救砖， 诺基亚638刷机升级推送救砖，诺基亚610C刷机升级推送救砖，诺基亚Lumia 1000刷机升级推送救砖，诺基亚521刷机升级推送救砖， itc M430刷机升级推送救砖，LG E906（Jil Sander)刷机升级推送救砖，HTCHD7（T9292）刷机升级推送救砖，诺基亚520刷机升级推送救砖，诺基亚Lumia 1020刷机升级推送救砖，诺基亚720刷机升级推送救砖，诺基亚928（Verizon版） 刷机升级推送救砖，华为Ascend W3刷机升级推送救砖， HTC Spark 刷机升级推送救砖，诺基亚825刷机升级推送救砖， HTC Schubert刷机升级推送救砖，HTC PC40100刷机升级推送救砖，诺基亚Lumia 800刷机升级推送救砖， HTC PD67100刷机升级推送救砖，富士通IS12T刷机升级推送救砖， 诺基亚900刷机升级推送救砖，HTC T8698（7 Mozart)刷机升级推送救砖， 微软Pink Kin TWOm刷机升级推送救砖，诺基亚526（移动3G)刷机升级推送救砖三星I8750（ATIV S/32GB）刷机升级推送救砖，三星I8750（ATIV S/16GB）刷机升级推送救砖，诺基亚610刷机升级推送救砖， 诺基亚Goldfinger 刷机升级推送救砖，诺基亚Phantom 刷机升级推送救砖，诺基亚636刷机升级推送救砖， 诺基亚820刷机升级推送救砖，诺基亚Spinel刷机升级推送救砖， 诺基亚635刷机升级推送救砖，诺基亚Microsoft Lumia 750刷机升级推送救砖，诺基亚Microsoft Lumia 1530刷机升级推送救砖，诺基亚Microsoft Lumia 532刷机升级推送救砖，Microsoft RM-1099刷机升级推送救砖，诺基亚RM-977刷机升级推送救砖， 华为Ascend W1-U00刷机升级推送救砖， 索尼爱立信Julie刷机升级推送救砖，华为Ascend W2-U00刷机升级推送救砖， 东芝TG03刷机升级推送救砖， 诺基亚Lumia 920T 刷机升级推送救砖，Microsoft Lumia 950 XL刷机升级推送救砖，诺基亚Microsoft 诺基亚Lumia 650刷机升级推送救砖，诺基亚800C刷机升级推送救砖，诺基亚730刷机升级推送救砖， 诺基亚630刷机升级推送救砖， HTC Bresson刷机升级推送救砖。三星I667（Focus 2）刷机升级推送救砖， TCL S606刷机升级推送救砖，Microsoft 诺基亚Lumia 640（双4G）刷机升级推送救砖， 诺基亚Lumia 925（16GB）刷机升级推送救砖， 诺基亚Lumia 1525刷机升级推送救砖， 三星I8700（Omnia 7）刷机升级推送救砖， HTC Titan II刷机升级推送救砖， LG E900（Optimus 7）刷机升级推送救砖， 诺基亚900 Hydra刷机升级推送救砖，LG C900（Optimus 7Q）刷机升级推送救砖，HTC Gold刷机升级推送救砖， HTC 8S刷机升级推送救砖， HTC 8X刷机升级推送救砖， Microsoft诺基亚Lumia 540刷机升级推送救砖，LG Lancet刷机升级推送救砖， 三星I917（Focus）刷机升级推送救砖， HTC 8X（C625e/LTE） HTC T8788（7 Surround）刷机升级推送救砖， 华硕WM7刷机升级推送救砖， 索尼爱立信Nanami刷机升级推送救砖， 中兴Render 刷机升级推送救砖，HTC X310e（凯旋） 刷机升级推送救砖，诺基亚620刷机升级推送救砖， 诺基亚Lumia920刷机升级推送救砖， HTC 7 Trophy（T8686）刷机升级推送救砖， 诺基亚900蝙蝠侠 刷机升级推送救砖，诺基亚Lumia 1030刷机升级推送救砖， LG M13刷机升级推送救砖， LG E740（Miracle）刷机升级推送救砖， 诺基亚Lumia 920刷机升级推送救砖， 三星OMNIA M（S759）刷机升级推送救砖， 诺基亚Lumia 929 刷机升级推送救砖，诺基亚625刷机升级推送救砖，三星OMNIA M（S7530)刷机升级推送救砖， 努比亚W5刷机升级推送救砖，诺基亚Lumia 1820刷机升级推送救砖， LG Uni8 刷机升级推送救砖，富士通IS12T刷机升级推送救砖， 诺基亚Lumia 730刷机升级推送救砖，小米米Phone刷机升级推送救砖， 诺基亚800（蝙蝠侠定制版） 刷机升级推送救砖，诺基亚RM-964 刷机升级推送救砖，华为Ascend W1-C00刷机升级推送救砖， LG GW910刷机升级推送救砖，诺基亚Lumia 930刷机升级推送救砖，HTC Titan Ⅲ刷机升级推送救砖， HTC Chrome刷机升级推送救砖， Acer E600 刷机升级推送救砖，诺基亚729刷机升级推送救砖，海信NANA刷机升级推送救砖， HTC 7 Trophy 刷机升级推送救砖，HTC HDD刷机升级推送救砖， Acer M310刷机升级推送救砖，HTC Bunyip 刷机升级推送救砖，HTC Elegant 刷机升级推送救砖， HTC 7 Pro(g)刷机升级推送救砖，HTC Diamond 3刷机升级推送救砖， 三星I8350刷机升级推送救砖，诺基亚Lumia X刷机升级推送救砖， 中兴V965W（Tania）刷机升级推送救砖，诺基亚750刷机升级推送救砖， 诺基亚703刷机升级推送救砖，HTC Titan刷机升级推送救砖， HTC C110e（Radar)刷机升级推送救砖， 诺基亚Lumia 925刷机升级推送救砖， 三星I937（Focus S）刷机升级推送救砖， 诺基亚P5238刷机升级推送救砖， 三星I677（Focus Flash）刷机升级推送救砖， 索尼爱立信X7 mini 刷机升级推送救砖， 三星I8350（Omnia W）刷机升级推送救砖， 戴尔Venue Pro刷机升级推送救砖， 诺基亚625（双卡版）刷机升级推送救砖， 诺基亚525 刷机升级推送救砖， 诺基亚725刷机升级推送救砖， 诺基亚Lumia 735 刷机升级推送救砖， 诺基亚926刷机升级推送救砖， 诺基亚610刷机升级推送救砖， 诺基亚Lumia 920（廉价版）刷机升级推送救砖， 诺基亚Lumia 1520刷机升级推送救砖， LG WP7 2刷机升级推送救砖， 华为Ascend W2（W2-T00/移动版）刷机升级推送救砖， HTC 7 Melody刷机升级推送救砖， HTC PB92100刷机升级推送救砖， LG VS750刷机升级推送救砖， VAIO Phone Biz刷机升级推送救砖， 三星OMNIA M（S7530E)刷机升级推送救砖， HP 惠普Elite x3刷机升级推送救砖， 索尼爱立信One刷机升级推送救砖， 阿尔卡特Idol Pro 4 刷机升级推送救砖， 小米4 HTC HD2，rx-100，rx.130，surface等工程机机型皆可接受远程刷机救砖升级推送服务，难度更高技术活的或者尸体和保密固件不分享的需要远程控刷，具体事宜可私聊或者脑电波咨询。</big></big></b></p>
-					</marquee>
-				</div>
-				<div>
-					<p>这里是WP基地（Windows Phone Base），是一个专注于Windows Phone操作系统爱好者是社区，创立于2021年1月20日，创始人是闲鱼用户“微软大中华区洋垃圾总代理”，QQ交流群总群号码为为104919261。<br><br>我们以传承和发扬Windows Phone操作系统的独特体验为目标，致力于让这个“失败的成功之作”继续发光发热。我们建立这个网站的目的，是考虑到部分资料和资源相对封闭、没有一个统一的整合网站。原先，各种教程分布于各QQ群的群文件中，寻找教程相对麻烦，我们希望通过这个网站实现对Windows Phone中文教程的电子化以便查找。同时，由于官方Microsoft Store对Windows Phone操作系统逐渐停止服务，Gxap开发了Windows通用商店为大家提供服务，以便快速安装各种软件。对于更早的Windows Phone 7~8.0系统，现存资料较少，难以进行破解，我们希望能够通过这个网站发布相关内容；对于放弃Windows Phone系列操作系统之后的内部构建，我们希望能够通过这个网站为大家提供操作方法。我们热爱Windows Phone，所以希望通过建立这个网站来为Windows Phone爱好者提供玩机文档和资源，同时保存下关于Windows Phone的一切留下一个最终的归宿。请相信，微软的遗产不止于此，定然有更多的内容等待着诸位发掘和发扬，未来定然有更多的内存浮出水面，正如岚秀所说：“有这些东西我们理论上可以玩到微软倒闭，哦不，倒闭了还能继续玩。”<br><br>本站为非盈利性质网站，本站的建立离不开QQ群“WP特技研究所”管理组成员、离不开为Windows Phone玩机做出巨大贡献的各路大佬、离不开支持我们的所有人，你们的支持是我们坚持下去的动力。此外，本站部分相关人员不定期提供无常或有偿的远程协助操作Lumia设备的服务，如有需求请通过QQ联系；本站部分相关人员有价格实惠的二手Lumia手机出售，具体信息请关注闲鱼内容。<br><br>本站提示：操作前请确保您具有相关计算机基本操作知识，遇到拿不准的内容请先通过各种途径询问。切勿相信闲鱼部分商家宣传的“特殊手段”或“绝版资料出售”，所有内容均在国内外网站有公开，不要为这些内容付费！刷机有风险，操作需谨慎，重要资料和基带分区请及时备份，本站不因您操作设备造成的损失承担任何责任。</p>
-				</div>
-			</div>
-		</div>
-		<div id="extra-links" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
-			<div style="margin:2.5em;">
-				<h2 style="text-align:center;">相关网站</h2>
+		<div class="content-item" id="extlinks" style="width:100%; height:auto; margin:8px 0px;">
+			<div style="margin:16px 5%;">
+				<h2 align="center">相关网站</h2>
 				<p>以下网站也可查阅相关资料：</p>
 				<ul>
 					<li><a href="http://www.52wfun.com">吾爱微锋</a>：微软设备与软硬件交流论坛</li>
 					<li><a href="http://msheritage.qlmfs.org/WPBase">MS-Heritage百科</a>：微软移动设备与微软移动操作系统百科</li>
 				</ul>
-				<p><br></p>
+				<p>……</p>
 			</div>
 		</div>
-		<div id="footer" style="width:100%; background-color:#404040; color:white; text-align:center; padding:16px 0;">
+		<div class="content-item" id="footer" style="width:100%; height:auto; margin:0px; background-color:#404040; color:white;padding:16px 0;">
 			<p align="center">服务器管理：YZ22B338807<br>教程网站管理：Shiriko123<br>技术支持：Ritsu909<br><br>&copy; 2022～2025 WP基地 保留所有权利（另有声明除外）<br><br>本站当前服务器：<a href="https://www.qkidc.com">全科云</a> <a href="https://github.com">GitHub Pages</a><br>字体鸣谢：<a href="https://www.jetbrains.com">JetBrains</a> <a href="https://github.com/adobe-fonts">思源黑体</a></p>
 		</div>
 	</div>
 </body>
+
 </html>
