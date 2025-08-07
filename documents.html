@@ -104,7 +104,8 @@ function getElementsByClassName(node, className) {
 fetchRSS();
 </script>
 </head>
-<body>
+<body bgcolor="#F0F0F0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"> <!--bgcolor="#0072C6"-->
+	<!--导航栏-->
 	<div class="navigator" style="width:100%; min-width:480px; height:64px; background-color:#FFFFFF; display:flex; align-items:center; position:fixed; top:0px; left:0px; overflow:hidden; z-index: 1000; margin:0px; padding:0px;">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
@@ -121,19 +122,31 @@ fetchRSS();
 			</tr>
 		</table>
 	</div>
-	<div id="title" style="width:100%; min-width:480px; height:48px; background-color:#FFFFFF; display:flex; align-items:center; overflow:hidden; margin:0px; padding:0px;">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<!--隐藏放置h1以欺骗搜索引擎-->
+	<div id="title" align="center" style="position:absolute; z-index:1; top:0px; width:100%; height:64px; min-width:480px; background-color: #FFFFFF; margin:0px; display:flex; align-items:center;">
+		<table width="100%" height="64px" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="100%" align="center"><h1>Windows Phone Base丨WP基地</h1></td>
 			</tr>
 		</table>
 	</div>
-	<div id="content-body" style="width:100%; max-width:1600px; min-width:480px; margin:0 auto; padding-top:16px; padding-bottom: 0px; border:0px;">
-		<div id="header" align="center" style="width:50%; max-width:800px; min-width:240px; margin:0 auto; padding:16px 0;">
-			<p><img src="banner.png" alt="I AM 0.1%!" style="width:80%; max-width:960px; min-width:400px;"></p>
-			<p>文档内容（简版展示）<br>订阅地址：<a href="https://api.wpbase.org/documents/article.php">https://api.wpbase.org/documents/article.php</a><br><br><br></p>
+	<!--正文-->
+	<div id="content-container" style="position:absolute; z-index:1; top:64px; width:100%; height:auto; min-width:480px; background-color:#F0F0F0; min-width:480px; margin:0px auto;">
+		<div class="content-item" id="banner" style="width:100%; height:auto; margin:8px auto;">
+			<div style="margin:16px 5%;">
+				<p align="center"><img border="0" src="banner.png" width="100%" height="auto" style="max-height:400px; max-width:960px;" alt="WE ARE 0.1%!" ></p>
+			</div>
 		</div>
-		<div id="feed" style="width:100%; overflow:hidden; padding:0px; align-items:center;"></div>
+		<div class="content-item" id="news" style="width:100%; height:auto; margin:8px 0px;">
+			<div style="margin:16px 5%;">
+				<p align="center"><big><big><big><b>文档内容（简版展示）</b></big></big></big></p>
+				<p align="center"><big><b>订阅地址：<a href="https://api.wpbase.org/documents/article.php">https://api.wpbase.org/documents/article.php</a></b></big><br><br><br></p>
+				<div id="feed" style="width:100%; overflow:hidden; padding:0px;"></div>
+			</div>
+		</div>
+		<div class="content-item" id="footer" style="width:100%; height:auto; margin:0px; background-color:#404040; color:white;padding:16px 0;">
+			<p align="center">服务器管理：YZ22B338807<br>教程网站管理：Shiriko123<br>技术支持：Ritsu909<br><br>&copy; 2022～2025 WP基地 保留所有权利（另有声明除外）<br><br>本站当前服务器：<a href="https://www.qkidc.com">全科云</a> <a href="https://github.com">GitHub Pages</a><br>字体鸣谢：<a href="https://www.jetbrains.com">JetBrains</a> <a href="https://github.com/adobe-fonts">思源黑体</a></p>
+		</div>
 	</div>
 </body>
 </html>
