@@ -29,7 +29,7 @@ function fetchRSS() {
 			try {
 				var data = JSON.parse(xhr.responseText);
 				if (data.error) {
-					document.getElementById('rss-feed').innerHTML = '<p>Error loading RSS feed: ' + data.error + '</p>';
+					document.getElementById('feed').innerHTML = '<p>Error loading RSS feed: ' + data.error + '</p>';
 					return;
 				}
 				displayRSS(data);
@@ -95,7 +95,7 @@ fetchRSS();
 			<div style="margin:2.5em;">
 				<h2 style="text-align:center;">最新文档</h2>
 				<p align="center">查阅全部文档请访问：<a href="http://ww1.wpbase.org/documents.html">教程文档</a></p>
-				<div id="feed"></div>
+				<div id="feed" style="width:100%; overflow:hidden; padding:0px;"></div>
 			</div>
 		</div>
 		<div id="about" style="width:100%; background-color:#F0F0F0; overflow:hidden; padding:0px; margin-top:32px; margin-bottom:32px; margin-left:0; margin-right:0;">
@@ -107,7 +107,7 @@ fetchRSS();
 					</marquee>
 				</div>
 				<div>
-					<p>这里是WP基地（Windows Phone Base），是一个专注于Windows Phone操作系统爱好者是社区，创立于2021年1月20日，创始人是闲鱼用户“微软大中华区洋垃圾总代理”。我们以传承和发扬Windows Phone操作系统的独特体验为目标，致力于让这个失败的成功继续发光发热。如您想加入群聊与我们交流，请点击页面导航栏右侧的“联系方式”查看相关内容。QQ交流群总群号码为为104919261。<br>我们因共同的热爱聚于此。尽管Windows Phone操作系统已于2020年1月14日结束支持，但请相信，微软的遗产不止于此，再微软的仓库中可能仍有众多我们不知道的东西等待着发掘。正如岚秀所说：“有这些东西我们理论上可以玩到微软倒闭，哦不，倒闭了还能继续玩。”</p>
+					<p>这里是WP基地（Windows Phone Base），是一个专注于Windows Phone操作系统爱好者是社区，创立于2021年1月20日，创始人是闲鱼用户“微软大中华区洋垃圾总代理”，QQ交流群总群号码为为104919261。<br><br>我们以传承和发扬Windows Phone操作系统的独特体验为目标，致力于让这个“失败的成功之作”继续发光发热。我们建立这个网站的目的，是考虑到部分资料和资源相对封闭、没有一个统一的整合网站。原先，各种教程分布于各QQ群的群文件中，寻找教程相对麻烦，我们希望通过这个网站实现对Windows Phone中文教程的电子化以便查找。同时，由于官方Microsoft Store对Windows Phone操作系统逐渐停止服务，Gxap开发了Windows通用商店为大家提供服务，以便快速安装各种软件。对于更早的Windows Phone 7~8.0系统，现存资料较少，难以进行破解，我们希望能够通过这个网站发布相关内容；对于放弃Windows Phone系列操作系统之后的内部构建，我们希望能够通过这个网站为大家提供操作方法。我们热爱Windows Phone，所以希望通过建立这个网站来为Windows Phone爱好者提供玩机文档和资源，同时保存下关于Windows Phone的一切留下一个最终的归宿。请相信，微软的遗产不止于此，定然有更多的内容等待着诸位发掘和发扬，未来定然有更多的内存浮出水面，正如岚秀所说：“有这些东西我们理论上可以玩到微软倒闭，哦不，倒闭了还能继续玩。”<br><br>本站为非盈利性质网站，本站的建立离不开QQ群“WP特技研究所”管理组成员、离不开为Windows Phone玩机做出巨大贡献的各路大佬、离不开支持我们的所有人，你们的支持是我们坚持下去的动力。此外，本站部分相关人员不定期提供无常或有偿的远程协助操作Lumia设备的服务，如有需求请通过QQ联系；本站部分相关人员有价格实惠的二手Lumia手机出售，具体信息请关注闲鱼内容。<br><br>本站提示：操作前请确保您具有相关计算机基本操作知识，遇到拿不准的内容请先通过各种途径询问。切勿相信闲鱼部分商家宣传的“特殊手段”或“绝版资料出售”，所有内容均在国内外网站有公开，不要为这些内容付费！刷机有风险，操作需谨慎，重要资料和基带分区请及时备份，本站不因您操作设备造成的损失承担任何责任。</p>
 				</div>
 			</div>
 		</div>
