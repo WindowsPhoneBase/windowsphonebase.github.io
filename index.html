@@ -25,7 +25,7 @@
 // 获取JSON化的RSS数据
 function fetchRSS() {
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET', 'https://api.wpbase.org/documents/article.php', true);
+	xhr.open('GET', 'https://srv.wpbase.org/newdocs.php', true);
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			try {
@@ -71,9 +71,9 @@ fetchRSS();
 			<tr>
 				<td align="center" width="10%" height="100%" nowrap><a href="https://www.wpbase.org"><img border="0" src="logo.png" width="64" height="64" align="center"></a></td>
 				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org">项目首页</a></td>
-				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org/documents.html">教程文档</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="https://www.wpbase.org">教程文档</a></td>
 				<td align="center" width="10%" height="100%" nowrap><a href="https://store.wpbase.org">通用商店</a></td>
-				<td align="center" width="10%" height="100%" nowrap><a href="https://firmware.wpbase.org">固件下载</a></td>
+				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org/firmware.html">固件下载</a></td>
 				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org">占位符</a></td>
 				<td align="center" width="10%" height="100%" nowrap><a href="https://github.com/WindowsPhoneBase">GitHub项目</a></td>
 				<td align="center" width="10%" height="100%" nowrap><a href="http://ww1.wpbase.org">岚秀名言</a></td>
@@ -100,9 +100,9 @@ fetchRSS();
 		<div class="content-item" id="news" style="width:100%; height:auto; margin:8px 0px;">
 			<div style="margin:16px 5%;">
 				<h2 align="center">最新文档</h2>
-				<p align="center">查阅全部文档请访问：<a href="http://ww1.wpbase.org/documents.html">教程文档</a></p>
+				<p align="center">查阅全部文档请访问：<a href="https://www.wpbase.org">教程文档</a></p>
 				<div id="feed" style="width:100%; overflow:hidden; padding:0px;"></div>
-				<p align="center"><a href="http://ww1.wpbase.org/documents.html">查看更多文档…</a></p>
+				<p align="center"><a href="https://www.wpbase.org">查看更多文档…</a></p>
 				</div>
 		</div>
 		<div class="content-item" id="intro" style="width:100%; height:auto; margin:8px 0px;">
